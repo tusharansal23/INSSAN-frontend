@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from './components/Header';
+import Body from './components/Body';
+import Category from "./components/Category";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Team from "./components/Team";
+import Testimonial from "./components/Testimonial";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {/* Render the header component outside the Routes component */}
+      <Header />
+      
+      <Routes>
+        <Route path="/" element={<Body />}>
+          {/* Render other components as children of Route element prop */}
+          <Route index element={<Body />} />
+          <Route path="Category" element={<Category />} />
+          <Route path="About" element={<About />} />
+          <Route path="Contact" element={<Contact />} />
+          <Route path="Team" element={<Team />} />
+          <Route path="Testimonial" element={<Testimonial />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
