@@ -441,3 +441,88 @@
     padding-right: 0;
     border-right: none;
 }
+.category-container {
+    max-width: 600px;
+}
+.contact-container {
+    border: 1px dashed rgba(0, 185, 142, .3);
+}
+.navbar-img-container {
+    width: 30px; 
+    height: 30px;
+}
+.team-container {
+    max-width: 600px;
+}
+.testimonial-container {
+    max-width: 600px;
+}
+.testimonial-img-container {
+    width: 45px; 
+    height: 45px;
+}
+.navbar-bg-transparent {
+    background-color: transparent;
+}
+.slick-arrow {
+    background: #00b98e;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.slick-next::before, .slick-prev::before {
+    font-size: 70px;
+    color: #00B98E;
+}
+.slick-slider {
+    position: relative;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .slick-prev {
+    right: 0;
+    left: -32px;
+  }
+  
+  .slick-next {
+    margin-top: 7%;
+    left: -30px;
+  }
+  
+  /* New CSS styles for stacking arrows vertically */
+  .slick-prev {
+    transform: translateY(-50%); /* Rotate the arrow counter-clockwise */
+  }
+  
+  .slick-next {
+    transform: translateY(-50%); /* Rotate the arrow clockwise */
+  }
+  
+  /* .slick-prev:before,
+  .slick-next:before {
+    content: "->"; /* Hide the default arrow content 
+  } */
+  
+  .slick-prev {
+    top: calc(50% - 30px); /* Adjust the top position of the arrow */
+  }
+  
+  .slick-next {
+    bottom: calc(50% - 30px); /* Adjust the bottom position of the arrow */
+  }
+  .slick-next:focus, .slick-next:hover, .slick-prev:focus, .slick-prev:hover {
+    color: transparent;
+    outline: 0;
+    background: 0 0;
+  }
+  .slick-dots {
+    display: none !important;
+  }

@@ -8,7 +8,7 @@ import Testimonial from "./Testimonial";
 const Body = () => {
     return (
 
-        <>
+        <div className="container-xxl bg-white p-0">
             <Category/>
 
             <About/>
@@ -16,7 +16,7 @@ const Body = () => {
             <Team/>
             <Testimonial/>
         
-        </>
+        </div>
 
     );
 };

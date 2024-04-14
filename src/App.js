@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
+import Navbar from "./components/Navbar";
 import Body from './components/Body';
 import Category from "./components/Category";
 import About from "./components/About";
@@ -11,7 +12,9 @@ function App() {
   return (
     <BrowserRouter>
       {/* Render the header component outside the Routes component */}
+      <Navbar />
       <Header />
+      
       
       <Routes>
         <Route path="/" element={<Body />}>
