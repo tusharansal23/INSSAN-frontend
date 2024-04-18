@@ -1,5 +1,5 @@
-import '../css/style.css';
-import '../css/bootstrap.min.css';
+import item1 from '../img/INSSAN-item1.JPG';
+
 
 const Contact = () => {
 
@@ -10,7 +10,7 @@ const Contact = () => {
                     <div className="contact-container bg-white rounded p-4" /*style="border: 1px dashed rgba(0, 185, 142, .3)"*/>
                         <div className="row g-5 align-items-center">
                             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                                <img className="img-fluid rounded w-100" src="img/INSSAN-item1.JPG" alt=""/>
+                                <img className="img-fluid rounded w-100" src={item1} alt=""/>
                             </div>
                             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                                 <div className="mb-4">

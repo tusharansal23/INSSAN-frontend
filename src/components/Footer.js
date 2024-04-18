@@ -1,6 +1,9 @@
-import '../css/style.js';
-import '../css/bootstrap.min.css';
-
+import property1 from '../img/property-1.jpg';
+import property2 from '../img/property-2.jpg';
+import property3 from '../img/property-3.jpg';
+import property4 from '../img/property-4.jpg';
+import property5 from '../img/property-5.jpg';
+import property6 from '../img/property-6.jpg';
 const Footer = () => {
 
     return (
@@ -35,29 +38,29 @@ const Footer = () => {
                         <h5 className="text-white mb-4">Photo Gallery</h5>
                         <div className="row g-2 pt-2">
                             <div className="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt=""/>
+                                <img className="img-fluid rounded bg-light p-1" src={property1} alt=""/>
                             </div>
                             <div className="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt=""/>
+                                <img className="img-fluid rounded bg-light p-1" src={property2} alt=""/>
                             </div>
                             <div class="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt=""/>
+                                <img className="img-fluid rounded bg-light p-1" src={property3} alt=""/>
                             </div>
                             <div className="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt=""/>
+                                <img className="img-fluid rounded bg-light p-1" src={property4} alt=""/>
                             </div>
                             <div className="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt=""/>
+                                <img className="img-fluid rounded bg-light p-1" src={property5} alt=""/>
                             </div>
                             <div className="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt=""/>
+                                <img className="img-fluid rounded bg-light p-1" src={property6} alt=""/>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-white mb-4">Newsletter</h5>
                         <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                        <div className="position-relative mx-auto" style="max-width: 400px;">
+                        <div className="position-relative mx-auto footer-container" >
                             <input className="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
                             <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                         </div>

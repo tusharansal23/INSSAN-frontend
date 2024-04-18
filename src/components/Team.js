@@ -1,6 +1,8 @@
-import '../css/style.css';
-import '../css/bootstrap.min.css';
 
+import item2 from '../img/INSSAN-item2.JPG';
+import item3 from '../img/INSSAN-item3.JPG';
+import item4 from '../img/INSSAN-item4.JPG';
+import item5 from '../img/INSSAN-item5.JPG';
 const Team = () => {
 
     return (
@@ -15,7 +17,7 @@ const Team = () => {
                     <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div className="team-item rounded overflow-hidden">
                             <div className="position-relative">
-                                <img className="img-fluid" src="img/INSSAN-item2.JPG" alt=""/>
+                                <img className="img-fluid" src={item2} alt=""/>
                                 <div className="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a className="btn btn-square mx-1" href=""><i className="fab fa-facebook-f"></i></a>
                                     <a className="btn btn-square mx-1" href=""><i className="fab fa-twitter"></i></a>
@@ -31,7 +33,7 @@ const Team = () => {
                     <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div className="team-item rounded overflow-hidden">
                             <div className="position-relative">
-                                <img className="img-fluid" src="img/INSSAN-item3.JPG" alt=""/>
+                                <img className="img-fluid" src={item3} alt=""/>
                                 <div className="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a className="btn btn-square mx-1" href=""><i className="fab fa-facebook-f"></i></a>
                                     <a className="btn btn-square mx-1" href=""><i className="fab fa-twitter"></i></a>
@@ -47,7 +49,7 @@ const Team = () => {
                     <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div className="team-item rounded overflow-hidden">
                             <div className="position-relative">
-                                <img className="img-fluid" src="img/INSSAN-item4.JPG" alt=""/>
+                                <img className="img-fluid" src={item4} alt=""/>
                                 <div className="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a className="btn btn-square mx-1" href=""><i className="fab fa-facebook-f"></i></a>
                                     <a className="btn btn-square mx-1" href=""><i className="fab fa-twitter"></i></a>
@@ -63,7 +65,7 @@ const Team = () => {
                     <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div className="team-item rounded overflow-hidden">
                             <div className="position-relative">
-                                <img className="img-fluid" src="img/INSSAN-item5.JPG" alt=""/>
+                                <img className="img-fluid" src={item5} alt=""/>
                                 <div className="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a className="btn btn-square mx-1" href=""><i className="fab fa-facebook-f"></i></a>
                                     <a className="btn btn-square mx-1" href=""><i className="fab fa-twitter"></i></a>

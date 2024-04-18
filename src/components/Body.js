@@ -1,4 +1,5 @@
 
+import Header from "./Header";
 import Category from "./Category";
 import About from "./About";
 import Contact from "./Contact";
@@ -8,13 +9,16 @@ import Testimonial from "./Testimonial";
 const Body = () => {
     return (
 
-        <div className="container-xxl bg-white p-0">
+        <div className='body'>
+    
+            <Header />
             <Category/>
 
             <About/>
             <Contact/>
             <Team/>
             <Testimonial/>
+        
         
         </div>
 

@@ -1,5 +1,5 @@
-import '../css/style.css';
-import '../css/bootstrap.min.css';
+
+import item5 from '../img/INSSAN-item5.JPG';
 
 const About = () => {
 
@@ -10,7 +10,7 @@ const About = () => {
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                         <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                            <img class="img-fluid w-100" src="img/INSSAN-item5.JPG"/>
+                            <img class="img-fluid w-100" src={item5}/>
                         </div>
                     </div>
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

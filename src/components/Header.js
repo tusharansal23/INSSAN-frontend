@@ -6,6 +6,8 @@ import item4 from '../img/INSSAN-item4.JPG';
 import item5 from '../img/INSSAN-item5.JPG';
 import item6 from '../img/INSSAN-item6.JPG';
 import Slider from 'react-slick';
+// import '../css/bootstrap.min.css';
+// import '../css/style.css';
 
 const Header = () => {
   // Slick settings for the carousel
@@ -24,7 +26,7 @@ const Header = () => {
 
   return (
     
-    <div className="container-xxl bg-white p-0">
+    <div className="container-xxl bg-white p-0 mtinperc-10">
     <div className="container-fluid header bg-white p-0">
       <div className="row g-0 align-items-center flex-column-reverse flex-md-row">
         <div className="col-md-6 p-5 mt-lg-5">

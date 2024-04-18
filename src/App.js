@@ -1,34 +1,47 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from './components/Header';
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Body from './components/Body';
 import Category from "./components/Category";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Team from "./components/Team";
 import Testimonial from "./components/Testimonial";
+import Footer from "./components/Footer";
+import AdminLogin from "./components/AdminLogin";
+import Main from "./js/main";
 
 function App() {
   return (
     <BrowserRouter>
-      {/* Render the header component outside the Routes component */}
-      <Navbar />
-      <Header />
-      
-      
-      <Routes>
-        <Route path="/" element={<Body />}>
-          {/* Render other components as children of Route element prop */}
+      <Main />
+      <div className="container-xxl bg-white p-0">
+        <Navbar />
+        <Routes>
+          {/* Home route with nested routes */}
+          <Route path="/" element={<Home />} />
+
           <Route index element={<Body />} />
-          <Route path="Category" element={<Category />} />
-          <Route path="About" element={<About />} />
-          <Route path="Contact" element={<Contact />} />
-          <Route path="Team" element={<Team />} />
-          <Route path="Testimonial" element={<Testimonial />} />
-        </Route>
-      </Routes>
+
+          {/* AdminLogin route */}
+          <Route path="/AdminLogin" element={<AdminLogin />} />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
+
+// Home component with nested routes
+function Home() {
+  return (
+    <>
+      <Header />
+      <Outlet/> 
+    </>
+  );
+}
+
+
 
 export default App;
