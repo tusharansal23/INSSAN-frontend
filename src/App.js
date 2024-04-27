@@ -9,6 +9,8 @@ import Team from "./components/Team";
 import Testimonial from "./components/Testimonial";
 import Footer from "./components/Footer";
 import AdminLogin from "./components/AdminLogin";
+import Structure from "./components/Structure";
+import Register from "./components/Register";
 import Main from "./js/main";
 
 function App() {
@@ -20,8 +22,10 @@ function App() {
         <Routes>
           {/* Home route with nested routes */}
           <Route path="/" element={<Home />} />
-
+          <Route path="Structure" element={<Structure />}/>
           <Route index element={<Body />} />
+
+          <Route path="Register" element={<Register />}/>
 
           {/* AdminLogin route */}
           <Route path="/AdminLogin" element={<AdminLogin />} />

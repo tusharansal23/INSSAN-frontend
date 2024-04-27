@@ -1,6 +1,7 @@
 
-import '../css/bootstrap.min.css';
-import '../css/style.css';
+import testimonial1 from '../img/testimonial-1.jpg';
+import testimonial2 from '../img/testimonial-2.jpg';
+import testimonial3 from '../img/testimonial-3.jpg';
 
 const Testimonial = () =>{
     return (
@@ -16,7 +17,7 @@ const Testimonial = () =>{
                         <div className="bg-white border rounded p-4">
                             <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
                             <div className="d-flex align-items-center">
-                                <img className="img-fluid testimonial-img-container flex-shrink-0 rounded" src="img/testimonial-1.jpg" /*style="width: 45px; height: 45px;"*/ />
+                                <img className="img-fluid testimonial-img-container flex-shrink-0 rounded" src={testimonial1} /*style="width: 45px; height: 45px;"*/ />
                                 <div className="ps-3">
                                     <h6 className="fw-bold mb-1">Client Name</h6>
                                     <small>Profession</small>
@@ -28,7 +29,7 @@ const Testimonial = () =>{
                         <div className="bg-white border rounded p-4">
                             <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
                             <div className="d-flex align-items-center">
-                                <img className="img-fluid testimonial-img-container flex-shrink-0 rounded" src="img/testimonial-2.jpg" /*style="width: 45px; height: 45px;"*/ />
+                                <img className="img-fluid testimonial-img-container flex-shrink-0 rounded" src={testimonial2} /*style="width: 45px; height: 45px;"*/ />
                                 <div className="ps-3">
                                     <h6 className="fw-bold mb-1">Client Name</h6>
                                     <small>Profession</small>
@@ -40,7 +41,7 @@ const Testimonial = () =>{
                         <div className="bg-white border rounded p-4">
                             <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
                             <div className="d-flex align-items-center">
-                                <img className="testimonial-img-container img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" /*style="width: 45px; height: 45px;"*/ />
+                                <img className="testimonial-img-container img-fluid flex-shrink-0 rounded" src={testimonial3} /*style="width: 45px; height: 45px;"*/ />
                                 <div className="ps-3">
                                     <h6 className="fw-bold mb-1">Client Name</h6>
                                     <small>Profession</small>

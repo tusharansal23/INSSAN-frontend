@@ -1,6 +1,8 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import '../css/style.css';
 import logo from '../img/INSSAN-logo.png';
+import Register from './Register';
+import { Link } from 'react-router-dom';
 const Navbar = () =>{
     return (
         
@@ -36,14 +38,17 @@ const Navbar = () =>{
                                 <a href="404.html" class="dropdown-item">404 Error</a>
                             </div>
                         </div> --> */}
-                        <a href="contact.html" className="nav-item nav-link">Case Studies</a>
+                        <a href="contact.html" className="nav-item nav-link">Structure</a>
                         
                         <a href="contact.html" className="nav-item nav-link">Chapters</a>
                         
                         <a href="events.html" className="nav-item nav-link">Managing Council</a>
                         
                     </div>
-                    <a href="" className="btn btn-primary px-3 d-none d-lg-flex">Register</a>
+                    {/* <a href="" className="btn btn-primary px-3 d-none d-lg-flex">Register</a> */}
+                    <Link to="./Register" className="btn btn-primary px-3 d-none d-lg-flex"> 
+                        Register 
+                    </Link>
                 </div>
             </nav>
         </div>
