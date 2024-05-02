@@ -5,6 +5,7 @@ import Body from './components/Body';
 import Category from "./components/Category";
 import HomepageAbout from "./components/HomepageAbout";
 import Contact from "./components/Contact";
+import HomepageContact from "./components/HomepageContact";
 import Team from "./components/Team";
 import Testimonial from "./components/Testimonial";
 import Footer from "./components/Footer";
@@ -35,6 +36,7 @@ function App() {
           
           <Route path="/About" element={<About />} />
           
+          <Route path="/HomepageContact" element={<HomepageContact />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
         <Footer />
