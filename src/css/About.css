@@ -1,0 +1,45 @@
+.about-animation {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .about-animation span {
+    display: inline-block;
+    opacity: 0;
+    animation: reveal 10s forwards; /* Apply animation */
+    
+    animation-iteration-count: infinite;
+  }
+
+  /* Delay animation for each letter */
+  .about-animation span:nth-child(1) {
+    animation-delay: 0s; /* No delay for the first letter */
+  }
+  .about-animation span:nth-child(2) {
+    animation-delay: 1s; /* Delay for the second letter */
+  }
+  .about-animation span:nth-child(3) {
+    animation-delay: 2s; /* Delay for the third letter */
+  }
+  .about-animation span:nth-child(4) {
+    animation-delay: 3s; /* Delay for the third letter */
+  }
+  .about-animation span:nth-child(5) {
+    animation-delay: 4s; /* Delay for the third letter */
+  }
+  .about-animation span:nth-child(6) {
+    animation-delay: 5s; /* Delay for the third letter */
+  }
+  /* Add more nth-child selectors for additional letters */
+  
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateX(50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+  }

@@ -1,7 +1,6 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import '../css/style.css';
 import logo from '../img/INSSAN-logo.png';
-import Register from './Register';
 import { Link } from 'react-router-dom';
 const Navbar = () =>{
     return (
@@ -21,8 +20,8 @@ const Navbar = () =>{
                 </button>
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <div className="navbar-nav ms-auto">
-                        <a href="index.html" className="nav-item nav-link active">Home</a>
-                        <a href="about.html" className="nav-item nav-link">About</a>
+                        <Link to="./" className="nav-item nav-link active">Home</Link>
+                        <Link to="./About" className="nav-item nav-link">About</Link>
                         {/* <!-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Property</a>
                             <div class="dropdown-menu rounded-0 m-0">
@@ -38,9 +37,11 @@ const Navbar = () =>{
                                 <a href="404.html" class="dropdown-item">404 Error</a>
                             </div>
                         </div> --> */}
-                        <a href="contact.html" className="nav-item nav-link">Structure</a>
+
                         
-                        <a href="contact.html" className="nav-item nav-link">Chapters</a>
+                        <Link to="./Structure" className="nav-item nav-link">Structure</Link>
+                        <Link to="./Contact" className="nav-item nav-link">Contact Us</Link>
+                        
                         
                         <a href="events.html" className="nav-item nav-link">Managing Council</a>
                         

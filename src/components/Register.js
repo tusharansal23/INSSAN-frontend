@@ -211,9 +211,9 @@ const Register = () => {
                         <h6>Industry Type</h6>
                         <select value={selectedOption} onChange={handleDropdownChange}>
                             <option value="">Select an option</option>
-                            <option value="A">Engineering</option>
-                            <option value="B">Service</option>
-                            <option value="C">Process</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Service">Service</option>
+                            <option value="Process">Process</option>
                             <option value="Other">Other</option>
                         </select>
                         {/* Conditionally render input field for "Other" option */}
@@ -236,9 +236,9 @@ const Register = () => {
                         <h6>Organisation Type</h6>
                         <select value={organisationSelectedOption} onChange={handleOrganisationChange}>
                             <option value="">Select an option</option>  
-                            <option value="A">Pvt. Sector</option>
-                            <option value="B">Public</option>
-                            <option value="C">Joint Sector</option>
+                            <option value="Pvt. Sector">Pvt. Sector</option>
+                            <option value="Public">Public</option>
+                            <option value="Joint Sector">Joint Sector</option>
                             <option value="Other">Other</option>
                         </select>
                         {/* Conditionally render input field for "Other" option */}
@@ -262,44 +262,32 @@ const Register = () => {
                         <h6>Other Programmes in operation</h6>
                         <select value={programSelectedOption} onChange={handleProgramChange}>
                             <option value="">Select an option</option>
-                            <option value="A">Scheme in Operation</option>
-                            <option value="B">Desirous of Introducing new scheme</option>
-                            <option value="C">Scheme exists, but needs improvement</option>
-                            <option value="Other">No Scheme exists, but interested in information</option>
+                            <option value="Scheme in Operation">Scheme in Operation</option>
+                            <option value="Desirous of Introducing new scheme">Desirous of Introducing new scheme</option>
+                            <option value="Scheme exists, but needs improvement">Scheme exists, but needs improvement</option>
+                            <option value="No Scheme exists, but interested in information">No Scheme exists, but interested in information</option>
                         </select>
-                        {/* Conditionally render input field for "Other" option */}
-                        {programSelectedOption === 'Other' && (
-                            <div>
-                                <label htmlFor="programOtherOption">Enter Other Option:</label>
-                                <input
-                                    type="text"
-                                    id="programOtherOption"
-                                    value={programOtherOption}
-                                    onChange={handleProgramOtherOptionChange}
-                                />
-                            </div>
-                        )}
+                        
                         <p>Selected Option: {programSelectedOption}</p>
-                        {/* Display custom other option if selected */}
-                        {programSelectedOption === 'Other' && <p>Custom Other Option: {programOtherOption}</p>}
+                        
                     </div>
                 </div>
                 <div className="form-row">
                     <div className="form-column">
                         <h6>Type of Membership</h6>
-                        <select value={selectedOption} onChange={handleMembershipChange}>
+                        <select value={membershipSelectedOption} onChange={handleMembershipChange}>
                             <option value="">Select an option</option>
-                            <option value="A">Corporate</option>
-                            <option value="B">Associate</option>
-                            <option value="C">Affiliate</option>
-                            <option value="C">Individual</option>
-                            <option value="C">Small Scale Industry as Corp. Mem</option>
+                            <option value="Corporate">Corporate</option>
+                            <option value="Associate">Associate</option>
+                            <option value="Affiliate">Affiliate</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Small Scale Industry as Corp. Mem">Small Scale Industry as Corp. Mem</option>
                         </select>
                         <p>Selected Option: {membershipSelectedOption}</p>
                     </div>
                     <div className="form-column">
                         <h6>Plan Type</h6>
-                        <select value={selectedOption} onChange={handlePlanChange}>
+                        <select value={planSelectedOption} onChange={handlePlanChange}>
                             <option value="">Select an option</option>
                             <option value="Entrance">Entrance</option>
                             <option value="Annual">Annual Subscription</option>

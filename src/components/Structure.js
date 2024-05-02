@@ -4,6 +4,8 @@ const Structure = () => {
 
     return (
 
+            <div class="container structure-max-width">
+                <div class="row g-5 align-items-center">
         <table className="table-color">
             <tbody>
                 {/* First row */}
@@ -110,6 +112,8 @@ const Structure = () => {
                 </tr>
             </tbody>
         </table>
+        </div>
+        </div>
 
     );
 };

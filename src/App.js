@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Body from './components/Body';
 import Category from "./components/Category";
-import About from "./components/About";
+import HomepageAbout from "./components/HomepageAbout";
 import Contact from "./components/Contact";
 import Team from "./components/Team";
 import Testimonial from "./components/Testimonial";
@@ -11,6 +11,9 @@ import Footer from "./components/Footer";
 import AdminLogin from "./components/AdminLogin";
 import Structure from "./components/Structure";
 import Register from "./components/Register";
+
+import HomepageMap from "./components/HomepageMap";
+import About from "./components/About";
 import Main from "./js/main";
 
 function App() {
@@ -29,6 +32,10 @@ function App() {
 
           {/* AdminLogin route */}
           <Route path="/AdminLogin" element={<AdminLogin />} />
+          
+          <Route path="/About" element={<About />} />
+          
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

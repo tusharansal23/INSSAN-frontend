@@ -1,4 +1,5 @@
 import item1 from '../img/INSSAN-item1.JPG';
+import HomepageMap from './HomepageMap';
 
 
 const Contact = () => {
@@ -23,6 +24,12 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="container">
+                <div className="bg-light rounded p-3">
+                    <HomepageMap/>
+                </div>
+
             </div>
         </div>
     );

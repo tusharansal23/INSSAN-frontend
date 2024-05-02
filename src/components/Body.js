@@ -1,10 +1,11 @@
 
 import Header from "./Header";
 import Category from "./Category";
-import About from "./About";
+import HomepageAbout from "./HomepageAbout";
 import Contact from "./Contact";
 import Team from "./Team";
 import Testimonial from "./Testimonial";
+import HomepageMap from "./HomepageMap";
 import '../css/bootstrap.min.css';
 import '../css/style.css';
 
@@ -16,8 +17,9 @@ const Body = () => {
             <Header />
             <Category/>
 
-            <About/>
+            <HomepageAbout/>
             <Contact/>
+            <HomepageMap/>
             <Team/>
             <Testimonial/>
         
