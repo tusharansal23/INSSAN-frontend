@@ -1,10 +1,29 @@
+import React, { useState } from 'react';
 import property1 from '../img/property-1.jpg';
 import property2 from '../img/property-2.jpg';
 import property3 from '../img/property-3.jpg';
 import property4 from '../img/property-4.jpg';
 import property5 from '../img/property-5.jpg';
 import property6 from '../img/property-6.jpg';
+import '../css/footer.css';
 const Footer = () => {
+
+    const [email, setEmail] = useState('');
+    const [isValidEmail, setIsValidEmail] = useState(true);
+    const [isSubscribed, setIsSubscribed] = useState(false);
+    
+    const subscribeHandler = () => {
+        // Regular expression to check if the email follows a valid format
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!emailPattern.test(email)) {
+            setIsValidEmail(false);
+        } else {
+            setIsValidEmail(true);
+            setIsSubscribed(true);
+            // Logic to subscribe if email is valid
+        }
+    };
 
     return (
 
@@ -59,11 +78,35 @@ const Footer = () => {
                     </div>
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-white mb-4">Newsletter</h5>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                        <div className="position-relative mx-auto footer-container" >
-                            <input className="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                        </div>
+                        <p>Subscribe to our newsletter to get the latest news and updates!</p>
+                        {!isSubscribed ? (
+                            <div className="position-relative mx-auto footer-container" >
+                                <input
+                                    className="form-control bg-transparent w-100 py-3 ps-4 pe-5 c-red"
+                                    type="text"
+                                    placeholder="Your email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                                {!isValidEmail && <p className="text-danger">Please enter a valid email address.</p>}
+                                <button
+                                    type="button"
+                                    className="btn btn-primary position-absolute end-0 mt-2"
+                                    onClick={subscribeHandler}
+                                >
+                                    Subscribe
+                                </button>
+                            </div>
+                            ) : (
+                                <button
+                                    type="button"
+                                    className="btn btn-primary end-0 mt-2"
+                                    disabled
+                                >
+                                        Subscribed
+                                </button>
+                                )}    
+                        
                     </div>
                 </div>
             </div>
@@ -85,7 +128,6 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        
     );
 };
 export default Footer;

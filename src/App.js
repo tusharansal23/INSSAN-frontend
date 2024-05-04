@@ -17,10 +17,14 @@ import HomepageMap from "./components/HomepageMap";
 import About from "./components/About";
 import Main from "./js/main";
 
+// import AboutAnimation from "./js/AboutAnimation";
+
+
 function App() {
   return (
     <BrowserRouter>
       <Main />
+      {/* <AboutAnimation/> */}
       <div className="container-xxl bg-white p-0">
         <Navbar />
         <Routes>

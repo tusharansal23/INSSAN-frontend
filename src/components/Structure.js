@@ -1,8 +1,16 @@
 import '../css/Structure.css';
+import structure from '../img/structure.jpg';
 
 const Structure = () => {
 
     return (
+
+        <>
+            <div class="container structure-max-width">
+                <div class="row g-5 align-items-center">
+                <img className="p-inpx-0 w-100" src={structure} alt=""/>
+                </div>
+            </div>
 
             <div class="container structure-max-width">
                 <div class="row g-5 align-items-center">
@@ -115,6 +123,7 @@ const Structure = () => {
         </div>
         </div>
 
+        </>
     );
 };
 export default Structure;
