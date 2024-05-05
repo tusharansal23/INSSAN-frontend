@@ -51,16 +51,18 @@ const Contact = () => {
                                                 <input type="text" placeholder="Phone Number" />
                                             </div>
                                         </div>
-                                        <div className="form-column">
-                                            <textarea
-                                                type="text"
-                                                id="messageBox"
-                                                rows="7"
-                                                placeholder="Message"
-                                                required
-                                            />
+                                        <div className="form-row">
+                                            <div className="form-column">
+                                                <textarea
+                                                    type="text"
+                                                    id="messageBox"
+                                                    rows="7"
+                                                    placeholder="Message"
+                                                    required
+                                                />
+                                            </div>
                                         </div>
-                                            <a className="btn btn-primary contact-form-button" href="mailto:secretary.inssan.nic@gmail.com, tusharansal23@gmail.com">Submit</a>
+                                        <a className="btn btn-primary contact-form-button" href="mailto:secretary.inssan.nic@gmail.com, tusharansal23@gmail.com">Submit</a>
                                         
                                     </form>
                                 </div>
