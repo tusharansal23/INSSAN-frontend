@@ -11,7 +11,7 @@ const Team = () => {
             <div className="container">
                 <div className="team-container text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" /*style="max-width: 600px;"*/>
                     <h1 className="mb-3">Our Team</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <p>Explore Our Team, A Fusion of Talent and Tenacity. Where Passion Meets Proficiency. Discover Unmatched Expertise and Dedication.</p>
                 </div>
                 <div className="row g-4">
                     <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">

@@ -16,7 +16,7 @@ const HomepageContact = () => {
                             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                                 <div className="mb-4">
                                     <h1 className="mb-3">Contact With Our Certified Agent</h1>
-                                    <p>Eirmod sed ipsum dolor sit rebum magna erat. Tempor lorem kasd vero ipsum sit sit diam justo sed vero dolor duo.</p>
+                                    <p>We're committed to provide prompt and reliable support to address your needs and ensure a seamless experience</p>
                                 </div>
                                 <a href="" className="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Make A Call</a>
                                 <a href="" className="btn btn-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Get Appoinment</a>
