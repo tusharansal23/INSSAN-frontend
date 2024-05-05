@@ -459,6 +459,9 @@
 .category-container {
     max-width: 600px;
 }
+.ruby-text {
+    display: ruby-text;
+}
 .contact-container {
     border: 1px dashed rgba(0, 185, 142, .3);
 }
