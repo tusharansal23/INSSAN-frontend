@@ -32,28 +32,28 @@ const About = () => {
 
 
                         <h2>INSSAN achieves it’s mission by assisting member organizations by:</h2>
-                        <p>
+                        <p className=' d-flex align-items-baseline'>
                             <i className="fa fa-check text-primary me-3"></i>
                                 Collecting and disseminating information, statistics and program material 
                                 about Suggestion Schemes.
                         </p>
-                        <p>
+                        <p className=' d-flex align-items-baseline'>
                             <i className="fa fa-check text-primary me-3"></i>
                                 Developing professional standards and programs for enhanced efficiency 
                                 and effectiveness of Suggestion Scheme.
                                 </p>
-                        <p>
+                        <p className=' d-flex align-items-baseline'>
                             <i className="fa fa-check text-primary me-3"></i>
                                 Organizing Training Programs, Workshops, Consultancy programs for the 
                                 benefit of Suggestion Scheme managers, administrators, employees, etc.
                         </p>
-                        <p>
+                        <p className=' d-flex align-items-baseline'>
                             <i className="fa fa-check text-primary me-3"></i>
                                 Providing an opportunity for members to meet and exchange information, 
                                 ideas and to share experiences through Workshops, Annual Convention, 
                                 etc. Recognizing Excellence in Suggestion Scheme.
                         </p>
-                        <p>
+                        <p className=' d-flex align-items-baseline'>
                             <i className="fa fa-check text-primary me-3"></i>
                                 Encouraging formation of local INSSAN Chapters and Local Centers under 
                                 Regional Chapters.

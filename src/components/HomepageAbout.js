@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import item5 from '../img/INSSAN-item5.JPG';
+import '../css/HomepageAbout.css';
 
 const HomepageAbout = () => {
 
@@ -40,13 +41,13 @@ const HomepageAbout = () => {
                                          objectives rather than a mere ‘Scheme’, a set of rules and rewards.
                         
                         </p> --> */}
-                        <p><i className="fa fa-check text-primary me-3"></i>professional support network dedicated to assisting 
+                        <p className='d-flex align-items-baseline'><i className="fa fa-check text-primary me-3"></i>professional support network dedicated to assisting 
                                                                         organizations to create, maintain and reinforce 
                                                                         their Employees Suggestion Scheme.</p>
-                        <p><i className="fa fa-check text-primary me-3"></i>managed by a team of Suggestion Scheme Practitioners 
+                        <p className='d-flex align-items-baseline'><i className="fa fa-check text-primary me-3"></i>managed by a team of Suggestion Scheme Practitioners 
                                                                         with hands on experience and is the only Indian 
                                                                         Professional Body in this field.</p>
-                        <p><i className="fa fa-check text-primary me-3"></i>works with organisations in all areas of Indian 
+                        <p className='d-flex align-items-baseline'><i className="fa fa-check text-primary me-3"></i>works with organisations in all areas of Indian 
                                                                         Industry both in the private and public arena in 
                                                                         manufacturing, financial and services sector, and it 
                                                                         maintains close links with sister associations overseas.
