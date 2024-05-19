@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import logo from '../img/INSSAN-logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState('Home'); // Initially set to 'Home'
+
+    const location = useLocation();
+    // const isDashboardDummyPage = location.pathname === '/DashboardDummy';
+    const isDashboardDummyPage = location.pathname;
+
+    // Render navbar only if not on DashboardDummy page
+    if (isDashboardDummyPage==='/DashboardDummy' || isDashboardDummyPage==='/DashboardChapter' || isDashboardDummyPage==='/DashboardEvent' || isDashboardDummyPage==='/DashboardGallery' ) {
+        return null;
+    }
 
     const handleLinkClick = (linkName) => {
         setActiveLink(linkName);

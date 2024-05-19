@@ -28,7 +28,7 @@ const Footer = () => {
 
     return (
 
-        <div className="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div className="container-fluid bg-footer text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div className="container py-5">
                 <div className="row g-5">
                     <div className="col-lg-3 col-md-6">
@@ -92,7 +92,7 @@ const Footer = () => {
                                 {!isValidEmail && <p className="text-danger">Please enter a valid email address.</p>}
                                 <button
                                     type="button"
-                                    className="btn btn-primary position-absolute end-0 mt-2"
+                                    className="btn btn-primary position-absolute end-0 mt-2 w-100"
                                     onClick={subscribeHandler}
                                 >
                                     Subscribe
@@ -101,7 +101,7 @@ const Footer = () => {
                             ) : (
                                 <button
                                     type="button"
-                                    className="btn btn-primary end-0 mt-2"
+                                    className="btn btn-primary end-0 mt-2 w-100"
                                     disabled
                                 >
                                         Subscribed

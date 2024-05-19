@@ -4,3 +4,9 @@
 .align-items-baseline{
     align-items: baseline;
 }
+.w-100{
+    width: 100%;
+}
+.bg-footer {
+    background-color: #0e2e50!important;
+}
