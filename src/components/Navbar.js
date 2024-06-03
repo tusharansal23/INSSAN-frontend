@@ -10,7 +10,9 @@ const Navbar = () => {
     const isDashboardDummyPage = location.pathname;
 
     // Render navbar only if not on DashboardDummy page
-    if (isDashboardDummyPage==='/DashboardDummy' || isDashboardDummyPage==='/DashboardChapter' || isDashboardDummyPage==='/DashboardEvent' || isDashboardDummyPage==='/DashboardGallery' ) {
+    if (isDashboardDummyPage==='/DashboardDummy' || isDashboardDummyPage==='/DashboardChapter' || 
+        isDashboardDummyPage==='/DashboardEvent' || isDashboardDummyPage==='/DashboardGallery' || 
+        isDashboardDummyPage==='/ChangePassword' || isDashboardDummyPage==='/AccountSetting' ) {
         return null;
     }
 

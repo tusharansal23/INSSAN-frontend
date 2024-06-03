@@ -83,7 +83,10 @@ const DashboardNav = ()=> {
         setLoading(false); // Reset loading if logout failed
     }
 };
-// Function to handle Chanfe Password
+    const handleSetting = () => {
+        window.location.href = '/AccountSetting';
+    }
+// Function to handle Change Password
 const handleChangePassword = async () => {
     setLoading(true); // Set loading to true when logout is initiated
     
@@ -171,7 +174,7 @@ const handleChangePassword = async () => {
                                             </div>
                                         </div>
                                         <div className="preview-item-content">
-                                            <p className="preview-subject ellipsis mb-1 text-small">Account settings</p>
+                                            <Link className="preview-subject ellipsis mb-1 text-small" to='/AccountSetting'>Account settings</Link>
                                         </div>
                                     </a>
                                     <div className="dropdown-divider"></div>
@@ -182,7 +185,7 @@ const handleChangePassword = async () => {
                                             </div>
                                         </div>
                                         <div className="preview-item-content">
-                                            <p className="preview-subject ellipsis mb-1 text-small">Change Password</p>
+                                            <Link className="preview-subject ellipsis mb-1 text-small" to='/ChangePassword'>Change Password</Link>
                                         </div>
                                     </a>
                                     <div className="dropdown-divider"></div>
@@ -396,7 +399,7 @@ const handleChangePassword = async () => {
                         aria-labelledby="profileDropdown">
                         <h6 className="p-3 mb-0 color-white">Profile</h6>
                         <div className="dropdown-divider"></div>
-                        <a className="dashboard-dropdown-item preview-item">
+                        <a className="dashboard-dropdown-item preview-item" onClick={handleSetting}>
                             <div className="preview-thumbnail">
                                 <div className="dashboard-preview-icon bg-dark rounded-circle">
                                     <i className="fa fa-cog text-success"></i>

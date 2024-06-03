@@ -1,0 +1,142 @@
+.mr-inpx-5 {
+    margin: 5px;
+}
+/* .cancel-button {
+    position: relative;
+    top: 10px;
+    left: calc(width)-15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.dashboard-chapter {
+    width: 800px;
+} */
+
+.cancel-button {
+    position: absolute; /* Use absolute positioning */
+    top: 10px;
+    right: 15px; /* Position from the right edge */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.form-group .event-form-input-background {
+    border: none;
+    background: #2A3038;
+    color: #6c7293;
+}
+.event-form-input-background:focus {
+    outline: none;
+    border: 1px solid rgba(71, 164, 71, 0.5);
+}
+
+.event-form {
+    position: relative; /* Make the form container a relative positioned element */
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #191c24;
+}
+.cancel-button i {
+    color: #e90707;
+}
+.event-form-input-background::placeholder {
+    color: #6c7293; /* Change this to the desired color */
+    opacity: 1;  /* For older browsers to ensure the color is applied */
+}
+.form-start-margin {
+    margin-top: 7%;
+}
+.event-list {
+    margin-top: 20px;
+}
+
+.event-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-actions button {
+    margin-left: 10px;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+.form-group .file-upload-info {
+    border: none;
+    background: #2A3038;
+}
+.input-group-append {
+    display: flex;
+}
+.input-button-row {
+    width: 1% !important;
+    flex: 1 1 auto;
+    margin-right: 20px;
+}
+.persons-list {
+    display: inline-grid;
+    margin-top: 10px;
+}
+.file-upload-browse {
+    background-color: #0090e7;
+    border-color: #0090e7;
+}
+.file-upload-default {
+    visibility: hidden;
+    position: absolute;
+}
+.image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+.h-inpx-100 {
+    height: 100px;
+}
+
+.image-preview img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+/* Add styles for placeholder if needed */
+.event-time::placeholder {
+    color: #ccc;
+}
+.time-picker {
+    display: flex;
+    height: 45px;
+}
+.event-visibility-hidden {
+    visibility: hidden;
+}
+.m-right-inpx-10 {
+    margin-right: 10px;
+}
+
+
+            /* calender css */
+
+
+

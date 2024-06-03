@@ -24,18 +24,51 @@
     cursor: pointer;
 }
 
+.form-group .chapter-form-input-background {
+    border: none;
+    background: #2A3038;
+    color: #6c7293;
+}
+.chapter-form-input-background:focus {
+    outline: none;
+    border: 1px solid rgba(71, 164, 71, 0.5);
+}
+
 .chapter-form {
     position: relative; /* Make the form container a relative positioned element */
     padding: 20px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: #191c24;
 }
 .cancel-button i {
-    color: #333;
+    color: #e90707;
 }
-
+.chapter-form-input-background::placeholder {
+    color: #6c7293; /* Change this to the desired color */
+    opacity: 1;  /* For older browsers to ensure the color is applied */
+}
 .form-start-margin {
     margin-top: 7%;
+}
+.chapter-list {
+    margin-top: 20px;
+}
+
+.chapter-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chapter-details {
+    flex: 1;
+}
+
+.chapter-actions button {
+    margin-left: 10px;
 }

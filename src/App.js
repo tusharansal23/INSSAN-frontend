@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Outlet, Navigate} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -19,6 +19,8 @@ import DashboardDummy from './components/DashboardDummy';
 import DashboardChapter from "./components/DashboardChapter";
 import DashboardEvent from "./components/DashboardEvent";
 import DashboardNav from './components/DashboardNav';
+import DashboardMainPanel from './components/DashboardMainPanel';
+import AccountSetting from './components/AccountSetting';
 import DashboardGallery from './components/DashboardGallery';
 import ForgotPassword from "./components/ForgotPassword";
 import ChangePassword from "./components/ChangePassword";
@@ -36,8 +38,13 @@ import Cookies from 'js-cookie';
 function App() {
   // Check if user is authenticated
   // const isAuthenticated = Cookies.get('accessToken') !== undefined;
-   
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem('isAuthenticated') === 'true';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('isAuthenticated', isAuthenticated);
+  }, [isAuthenticated]);
   // alert(isAuthenticated);
 
   return (
@@ -74,11 +81,13 @@ function App() {
             <>
               <Route path="/Dashboard" element={<Dashboard />} />
               <Route path="/DashboardDummy" element={<DashboardDummy />} />
+              <Route path="/DashboardMainPanel" element={<DashboardMainPanel />} />
               <Route path="DashboardNav" element={<DashboardNav />} />
               <Route path="/DashboardChapter" element={<DashboardChapter />} />
               <Route path="/DashboardGallery" element={<DashboardGallery />} />
               <Route path="/DashboardEvent" element={<DashboardEvent />} />
               <Route path="/ChangePassword" element={<ChangePassword />} />
+              <Route path="/AccountSetting" element={<AccountSetting />} />
             </>
           ) : (
             <Route path="*" element={<Navigate to="/AdminLogin" />} />

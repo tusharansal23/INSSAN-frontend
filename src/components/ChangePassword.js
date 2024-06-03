@@ -2,18 +2,24 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import '../css/ForgotPassword.css'; // Assuming you have a CSS file for styling
+import DashboardNav from './DashboardNav';
+import '../css/ChangePassword.css'; // Assuming you have a CSS file for styling
 
 const ChangePassword = () => {
     const [oldPassword, setOldPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
-    const [passwordVisible, setPasswordVisible] = useState(false);
+    const [oldPasswordVisible, setOldPasswordVisible] = useState(false);
+    const [newPasswordVisible, setNewPasswordVisible] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
-    const togglePasswordVisibility = () => {
-        setPasswordVisible(!passwordVisible);
+    const toggleOldPasswordVisibility = () => {
+        setOldPasswordVisible(!oldPasswordVisible);
+    };
+
+    const toggleNewPasswordVisibility = () => {
+        setNewPasswordVisible(!newPasswordVisible);
     };
 
     const handleOldPasswordChange = (e) => {
@@ -51,7 +57,7 @@ const ChangePassword = () => {
             setOldPassword('');
             setNewPassword('');
             
-            navigate('/Dashboard'); // Change '/Dashboard' to the desired URL
+            navigate('/DashboardDummy'); // Change '/Dashboard' to the desired URL
         } catch (error) {
             setError('Failed to update password');
             console.error('Error updating password:', error.message);
@@ -61,40 +67,38 @@ const ChangePassword = () => {
     };
 
     return (
-        <div className="forgot-container">
-            <div className="password-container">
-                <div className="forgot-wrapper">
-                    <div className="forgot-avatar">
-                        {/* <img src={inssanAdmin} alt="Avatar"/> */}
-                    </div>
-                    <div className="forgot-form">
-                        <h2 className="forgot-h2">Change Password</h2>
+        <div className="container-scroller">
+            <DashboardNav />
+            <div className="container form-container form-start-margin">
+                <div className="dashboard-event">
+                    <div className="change-password-form">
+                        <h2>Change Password</h2>
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">
-                                <label htmlFor="oldPassword">Old Password:</label>
+                                <label htmlFor="oldPassword" className='color-white'>Old Password:</label>
                                 <div className="password-input">
-                                    <input type={passwordVisible ? "text" : "password"} 
+                                    <input className="change-password-form-input-background" type={oldPasswordVisible ? "text" : "password"} 
                                         id="oldPassword" 
                                         name="oldPassword" 
                                         value={oldPassword} 
                                         onChange={handleOldPasswordChange} 
                                         required />
-                                    <button type="button" className="password-toggle" onClick={togglePasswordVisibility}>
-                                        <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
+                                    <button type="button" className="password-toggle" onClick={toggleOldPasswordVisibility}>
+                                        <FontAwesomeIcon icon={oldPasswordVisible ? faEyeSlash : faEye} />
                                     </button>
                                 </div>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="newPassword">New Password:</label>
+                                <label htmlFor="newPassword" className='color-white'>New Password:</label>
                                 <div className="password-input">
-                                    <input type={passwordVisible ? "text" : "password"} 
+                                    <input className="change-password-form-input-background" type={newPasswordVisible ? "text" : "password"} 
                                         id="newPassword" 
                                         name="newPassword" 
                                         value={newPassword} 
                                         onChange={handleNewPasswordChange} 
                                         required />
-                                    <button type="button" className="password-toggle" onClick={togglePasswordVisibility}>
-                                        <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} />
+                                    <button type="button" className="password-toggle" onClick={toggleNewPasswordVisibility}>
+                                        <FontAwesomeIcon icon={newPasswordVisible ? faEyeSlash : faEye} />
                                     </button>
                                 </div>
                             </div>
@@ -109,8 +113,9 @@ const ChangePassword = () => {
                                 </div>
                             </div>
                         )}
+                        {error && <p className="error-message">{error}</p>}
                         <div className="forgot-options">
-                            <p><Link to="/Dashboard">Back to Dashboard</Link></p>
+                            <p><Link to="/DashboardDummy">Back to Dashboard</Link></p>
                         </div>
                     </div>
                 </div>

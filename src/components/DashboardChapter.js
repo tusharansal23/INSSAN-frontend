@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/DashboardChapter.css';
 import DashboardNav from './DashboardNav';
 // import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -10,6 +10,7 @@ const DashboardChapter = () => {
     const [name, setName] = useState('');
     const [company, setCompany] = useState('');
     const [location, setLocation] = useState('');
+    const [chapters, setChapters] = useState([]);
 
     const handleCreateButtonClick = () => {
         setShowForm(true);
@@ -43,6 +44,37 @@ const DashboardChapter = () => {
         setShowForm(false);
     };
 
+    const handleEdit = (id) => {
+        // Handle edit logic here
+        console.log('Edit chapter with id:', id);
+    };
+
+    const handleDelete = (id) => {
+        // Handle delete logic here
+        console.log('Delete chapter with id:', id);
+    };
+
+    useEffect(() => {
+        // Fetch data when the component mounts
+        const fetchChapters = async () => {
+            try {
+                const response = await fetch('http://localhost:4000/api/v1/chapters/');
+                const result = await response.json();
+                if (result.success && Array.isArray(result.data)) {
+                    setChapters(result.data);
+                } else {
+                    setChapters([]);
+                }
+            } catch (error) {
+                console.error('Error fetching chapters:', error);
+                setChapters([]); // Handle error by setting chapters to an empty array
+           
+            }
+        };
+
+        fetchChapters();
+    }, []);
+
     return (
         <div className="container-scroller">
             <DashboardNav/>
@@ -64,30 +96,46 @@ const DashboardChapter = () => {
                             <h2>Chapter Form</h2>
                             <form onSubmit={handleSubmit}>
                                 <div className="form-group">
-                                    <label htmlFor="chapter">Chapter:</label>
-                                    <input type="text" id="chapter" value={chapter} onChange={(e) => setChapter(e.target.value)} required />
+                                    <label htmlFor="chapter" className='color-white'>Chapter:</label>
+                                    <input className = "chapter-form-input-background" placeholder="Northern" type="text" id="chapter" value={chapter} onChange={(e) => setChapter(e.target.value)} required />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="designation">Designation:</label>
-                                    <input type="text" id="designation" value={designation} onChange={(e) => setDesignation(e.target.value)} required />
+                                    <label htmlFor="designation" className='color-white'>Designation:</label>
+                                    <input className = "chapter-form-input-background" placeholder= "Chairman" type="text" id="designation" value={designation} onChange={(e) => setDesignation(e.target.value)} required />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="name">Name:</label>
-                                    <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
+                                    <label htmlFor="name" className='color-white'>Name:</label>
+                                    <input className = "chapter-form-input-background" placeholder = "John Doe" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="company">Company:</label>
-                                    <input type="text" id="company" value={company} onChange={(e) => setCompany(e.target.value)} required />
+                                    <label htmlFor="company" className='color-white'>Company:</label>
+                                    <input className = "chapter-form-input-background" placeholder = "INSSAN Co." type="text" id="company" value={company} onChange={(e) => setCompany(e.target.value)} required />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="location">Location:</label>
-                                    <input type="text" id="location" value={location} onChange={(e) => setLocation(e.target.value)} required />
+                                    <label htmlFor="location" className='color-white'>Location:</label>
+                                    <input className = "chapter-form-input-background" placeholder = "Mumbai" type="text" id="location" value={location} onChange={(e) => setLocation(e.target.value)} required />
                                 </div>
                                 <button type="submit">Submit</button>
                         
                             </form>
                         </div>
                     )}
+
+                    <div className='chapter-list'>
+                        {chapters.map((chapterData) => (
+                            <div key={chapterData._id} className='chapter-item'>
+                                <div className='chapter-details'>
+                                    <h3>Chapter: {chapterData.chapter.name}</h3>
+                                    <p>Chairman: {chapterData.chairman.name}</p>
+                                    <p>Secretary: {chapterData.secretary.name}</p>
+                                </div>
+                                <div className='chapter-actions'>
+                                    <button onClick={() => handleEdit(chapterData._id)}>Edit</button>
+                                    <button onClick={() => handleDelete(chapterData._id)}>Delete</button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

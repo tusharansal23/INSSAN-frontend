@@ -922,6 +922,7 @@
             width: 100%; } }
       
       .container-scroller {
+        background: #000000;
         display: flex;
         position: relative; }
       
